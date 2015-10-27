@@ -85,7 +85,7 @@ function update() {
     }
 
     updateBalls();
-    
+
 }
 
 function updateBalls() {
@@ -99,6 +99,10 @@ function updateBalls() {
         if (balls[i].y >= WINDOW_HEIGHT - RADIUS) {
             balls[i].y = WINDOW_HEIGHT - RADIUS;
             balls[i].vy = -balls[i].vy * 0.6;
+        }
+        if (balls[i].x >= WINDOW_WIDTH - RADIUS){
+            balls[i].x = WINDOW_WIDTH - RADIUS;
+            balls[i].vx = -balls[i].vx * 0.6;
         }
     }
 
